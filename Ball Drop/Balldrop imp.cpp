@@ -27,7 +27,10 @@ bool askWhatToDo()
 	else if (answer == 'N')
 		return false;
 	else
+	{
 		std::cout << "\nError: Enter \'y\', \'Y\', \'n\' or \'N\' only.\n\n";
+		end();
+	}
 }
 
 
