@@ -55,6 +55,7 @@ double enterSeconds() // Get the specific seconds from the user
 	return specificsecond;
 }
 
+
 void calculateSpecificHeight(double second, double height) // calculates the height of the ball at specific second
 {
 	double result{ height - ballDrop(second) };
@@ -89,7 +90,10 @@ void showFiveSeconds() // if first input is 'y', this function executes
 		calculateHeight(5, currentHeight);
 	}
 	else
+	{
 		std::cout << "\nError: Please enter a floating number over 0 ONLY!\n\n";
+		end();
+	}
 }
 
 void showSpecificSecond() // if first input is 'n', this function executes
@@ -100,7 +104,10 @@ void showSpecificSecond() // if first input is 'n', this function executes
 	if (currentHeight, specificSecond > 0)
 		calculateSpecificHeight(specificSecond, currentHeight);
 	else
-		std::cout << "\n\nError: Please enter a floating number over 0 ONLY!\n\n";
+	{
+		std::cout << "\nError: Please enter a floating number over 0 ONLY!\n\n";
+		end();
+	}
 }
 
 void end()
